@@ -1,0 +1,21 @@
+.all {
+  margin: 20rpx;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.title2 {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.paragraph {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}

@@ -1,0 +1,14 @@
+<view class="all">
+  <view class="item">
+    <view class="item_left">
+      <image class="goodsimage"></image>
+      <text class="goodsname">商品1</text>
+      <text class="goodsprice">￥100</text>
+    </view>
+    <view class="item_right">
+      <image class="goodsimage"></image>
+      <text class="goodsname">商品2</text>
+      <text class="goodsprice">￥200</text>
+    </view>
+  </view>
+</view>

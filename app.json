@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/purchasedetail/purchasedetail",
+    "pages/home/getpurchase/getpurchase",
+    "pages/home/buygoods/buygoods",
+    "pages/home/sendpurchase/sendpurchase",
+    "pages/home/sellgoods/sellgoods",
+    "pages/reward/reward",
+    "pages/my/my",
+    "pages/my/address/address",
+    "pages/my/address/addaddress/addaddress",
+    "pages/my/gift/gift",
+    "pages/my/service/service",
+    "pages/my/rule/rule",
+    "pages/my/sendpurchaseselect/sendpurchaseselect",
+    "pages/my/sellgoodsselect/sellgoodsselect",
+    "pages/my/buygoodsselect/buygoodsselect"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Demo1",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ff00ff"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#0f0",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "utils/image/index.png",
+        "selectedIconPath": "utils/image/index_select.png"
+      },
+      {
+        "pagePath": "pages/reward/reward",
+        "text": "奖券",
+        "iconPath": "utils/image/reward.png",
+        "selectedIconPath": "utils/image/reward_select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "utils/image/my.png",
+        "selectedIconPath": "utils/image/my_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

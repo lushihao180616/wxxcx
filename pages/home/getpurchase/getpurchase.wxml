@@ -1,0 +1,36 @@
+<view class="all">
+  <view class="head">
+    <view class="icon">
+        <picker class="picker" bindchange="buildingChange" value="{{building_index}}" range="{{building_array}}">        
+          <image class="imageshape" src="{{building_image}}"></image>
+        </picker>
+        <picker class="picker" bindchange="typeChange" value="{{type_index}}" range="{{type_array}}"> 
+          <image class="imageshape" src="{{type_image}}"></image> 
+        </picker>
+        <image class="imageshape" src="{{price_image}}" bindtap="showNowPrice"></image>
+      </view>
+      <view class="search">
+        <image class="imageshape2" src="../../../utils/image/search.png"></image>
+        <input class="input" placeholder="名称关键字" placeholder-class="placeholderstyle"></input>
+      </view>
+  </view>
+  <view class="body">
+    <view class="item" bindtap="toPurchaseDetailPage">
+      <view class="item_row1">
+        <view class="item_type">
+          <image class="item_type_image" src="../../../utils/image/food.png"></image>
+        </view>
+        <view class="item_name_time">
+          <view class="item_name">肉夹馍</view>
+          <view class="item_time">19:30</view>
+        </view>
+      </view>
+      <view class="item_row2">
+        <view class="item_address_price">
+          <view class="item_address">五号楼506</view>
+          <view class="item_price">￥1.00</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

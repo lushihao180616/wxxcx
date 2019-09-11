@@ -1,0 +1,21 @@
+<!--pages/rule/rule.wxml-->
+<view class="all">
+  <text class="title">一、概述
+  </text>
+  <text class="paragraph" decode="{{true}}">&emsp;&emsp;捎微是专门为大学生设计的、专注于提供便捷服务的在线交易平台。在这里你将可以享受到如下便捷服务：接发任务、在线交易、看广告赢代金券。
+  </text>
+  <text class="title">二、详情
+  </text>
+  <text class="title2" decode="{{true}}">>>&ensp;接发任务
+  </text>
+  <text class="paragraph" decode="{{true}}">&emsp;&emsp;接发任务可以被认为是更灵活多变的外卖系统，这里您可以采用发出任务的形式，将您一切需要的服务公布给其他人，如果其他人看到并觉得可以完成，其将可以接收任务并在完成时赚取到您发布的赏金。填写模板如下：
+  </text>
+  <text class="title2" decode="{{true}}">>>&ensp;在线交易
+  </text>
+  <text class="paragraph" decode="{{true}}">&emsp;&emsp;在线交易可以被认为是校园二手交易平台，这里支持您将自己不需要的东西拿出来出售，物品价值、物品图片等相关内容自行填写即可。注意：如物品采用线下交易方式交易，本平台将不负责进行退换。填写模板如下：
+  </text>
+  <text class="title2" decode="{{true}}">>>&ensp;看广告赢代金券
+  </text>
+  <text class="paragraph" decode="{{true}}">&emsp;&emsp;看广告赢代金券是平台赚取代金券的一种方式，这里您可以通过看视频、图文广告并完成答题的形式，赢得代金券。代金券可以在发出任务时替换赏金。
+  </text>
+</view>

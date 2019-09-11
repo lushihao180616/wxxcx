@@ -1,0 +1,49 @@
+<view class="all">
+  <view class="row">
+    <text class="text" decode="{{true}}">名&emsp;&emsp;称</text>
+    <text class="text_value">肉夹馍</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">类&emsp;&emsp;型</text>
+    <text class="text_value">美食</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">地&emsp;&emsp;址</text>
+    <text class="text_value">西安工业大学一号宿舍楼506</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">赏&emsp;&emsp;金</text>
+    <text class="text_value">￥1.00</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">限&emsp;&emsp;时</text>
+    <text class="text_value">19:30</text>
+  </view>
+  <view class="row2">
+    <text class="text" decode="{{true}}">备&emsp;&emsp;注</text>
+    <text class="text_value">不要辣</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">发&ensp;单&ensp;人</text>
+    <text class="text_value">卢世豪-18191251242</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">发单时间</text>
+    <text class="text_value">18：30</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">接&ensp;单&ensp;人</text>
+    <text class="text_value">王典-18092320484</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">接单时间</text>
+    <text class="text_value">19：20</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">完成时间</text>
+    <text class="text_value">19：30</text>
+  </view>
+  <view class="back" bindtap="backToPage">
+    确认
+  </view>
+</view>

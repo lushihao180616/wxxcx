@@ -1,0 +1,48 @@
+.row {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10rpx;
+  background-color: #efefef;
+  height: 75rpx;
+  margin-bottom: 5rpx;
+}
+
+.text {
+  font-size: 30rpx;
+  width: 200rpx;
+}
+
+.picker {
+  font-size: 30rpx;
+  color: green;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  font-size: 30rpx;
+}
+
+.placeholderstyle {
+  font-size: 30rpx;
+}
+
+.foot {
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #efefef;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.addaddresstext {
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #16C4AF;
+}

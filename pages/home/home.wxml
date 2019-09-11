@@ -1,0 +1,15 @@
+<!--pages/my/my.wxml-->
+<view class="all">
+  <view class="top">
+    <view id="left_top" class="shape" bindtap="send_purchase">发任务
+    </view>
+    <view id="right_top" class="shape" bindtap="get_purchase">接任务
+    </view>
+  </view>
+  <view class="bottom">
+    <view id="left_bottom" class="shape" bindtap="sell_goods">出宝贝
+    </view>
+    <view id="right_bottom" class="shape" bindtap="buy_goods">入宝贝
+    </view>
+  </view>
+</view>

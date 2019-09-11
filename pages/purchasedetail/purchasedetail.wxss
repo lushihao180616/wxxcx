@@ -1,0 +1,50 @@
+.page {
+  background-color: #efefef;
+  height: 300rpx;
+}
+
+.row,.row2 {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10rpx;
+  background-color: #efefef;
+  height: 75rpx;
+  margin-bottom: 5rpx;
+}
+
+.text {
+  font-size: 30rpx;
+  width: 200rpx;
+}
+
+.text_value,.textarea_value {
+  font-size: 30rpx;
+  width: 100%;
+}
+
+.row2 {
+  height: 150rpx;
+}
+
+.textarea_value {
+  margin-top: 10rpx;
+  height: 140rpx;
+}
+
+.back {
+  height: 70rpx;
+  background-color: #09BB07;
+  position: fixed;
+  bottom: 40rpx;
+  left: 20rpx;
+  right: 20rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: white;
+}

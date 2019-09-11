@@ -1,0 +1,44 @@
+<view class="all">
+  <view class="row" style="margin-top:70rpx;">
+    <text class="text" decode="{{true}}">名&emsp;&emsp;称</text>
+    <input class="input" placeholder="名称" placeholder-class="placeholderstyle"></input>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">类&emsp;&emsp;型</text>
+    <picker class="picker" bindchange="typeChange" value="{{type_index}}" range="{{type_array}}">
+      <view>
+        {{type_array[type_index]}}
+      </view>
+    </picker> 
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">地&emsp;&emsp;址</text>
+    <picker class="picker" bindchange="addressChange" value="{{address_index}}" range="{{address_array}}">
+      <view>
+        {{address_array[address_index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="row" hidden="true">
+    <text class="text" decode="{{true}}">当面交付</text>
+    <radio-group class="radio-group">
+      <radio class="radio" value="true" checked="true"/>是
+      <radio class="radio radio2" value="false"/>否
+    </radio-group>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">赏&emsp;&emsp;金</text>
+    <input class="input" placeholder="赏金(元)" placeholder-class="placeholderstyle"></input>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">限&emsp;&emsp;时</text>
+    <input class="input" placeholder="限时" placeholder-class="placeholderstyle"></input>
+  </view>
+  <view class="row row2">
+    <text class="text" decode="{{true}}">备&emsp;&emsp;注</text>
+    <textarea class="input input2" placeholder="备注" maxlength="100" placeholder-class="placeholderstyle"></textarea>
+  </view>
+  <view class="foot">
+    <button class="button">发布</button>
+  </view>
+</view>

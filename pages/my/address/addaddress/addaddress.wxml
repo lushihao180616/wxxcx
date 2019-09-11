@@ -1,0 +1,33 @@
+<view class="all">
+  <view class="row">
+    <text class="text" decode="{{true}}">学&emsp;校</text>
+    <picker class="picker" bindchange="schoolChange" value="{{school_index}}" range="{{school_array}}">
+      <view>
+        {{school_array[school_index]}}
+      </view>
+    </picker> 
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">建筑物</text>
+    <picker class="picker" bindchange="buildingChange" value="{{building_index}}" range="{{building_array}}">
+      <view>
+        {{building_array[building_index]}}
+      </view>
+    </picker> 
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">房间号</text>
+    <input class="input" placeholder="房间号" placeholder-class="placeholderstyle"></input>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">姓&emsp;名</text>
+    <input class="input" placeholder="姓名" placeholder-class="placeholderstyle"></input>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">手机号</text>
+    <input class="input" placeholder="手机号" placeholder-class="placeholderstyle"></input>
+  </view>
+  <view class="foot" bindtap="toAddressPage">
+    <text class="addaddresstext">添加地址</text>
+  </view>
+</view>

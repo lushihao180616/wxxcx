@@ -1,0 +1,19 @@
+<view class="all">
+  <view class="item" bindtap="toPurchaseDetailPage">
+    <view class="item_row1">
+      <view class="item_type">
+        <image class="item_type_image" src="../../../utils/image/food.png"></image>
+      </view>
+      <view class="item_name_time">
+        <view class="item_name">肉夹馍</view>
+        <view class="item_time">19:30</view>
+      </view>
+    </view>
+    <view class="item_row2">
+      <view class="item_address_price">
+        <view class="item_address">五号楼506</view>
+        <view class="item_price">￥1.00</view>
+      </view>
+    </view>
+  </view>
+</view>

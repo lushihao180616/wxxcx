@@ -1,0 +1,97 @@
+page {
+  background-color: #efefef;
+}
+
+.back {
+  width: 4000rpx;
+  height: 4000rpx;
+  background-color: #666;
+  border-radius: 50%;
+  margin-top: -3780rpx;
+  margin-left: -1625rpx;
+  padding-left: 3rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20rpx;
+  margin: 0rpx 1685rpx;
+  margin-top: 3800rpx;
+  background-color: bisque;
+  height: 250rpx;
+}
+
+.userinfo-avatar {
+  width: 117rpx;
+  height: 117rpx;
+  margin: 20rpx;
+  margin-top: -30rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-top: -40rpx;
+  font-size: 30rpx;
+  color: black;
+  font-weight: bolder;
+}
+
+.row {
+  margin-top: 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+}
+
+.row_item {
+  margin: 10rpx;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+  border-radius: 15rpx;
+  background-color: #f2eada;
+}
+
+.image_item {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.item {
+  margin-top: 50rpx;
+  background-color: white;
+  width: 100%;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+}
+
+.shape {
+  width: 100%;
+  height: 75rpx;
+  padding-left: 10rpx;
+  font-size: 25rpx;
+  line-height: 75rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.border {
+  width: 100%;
+  margin-left: 70rpx;
+  border: 1rpx solid #ddd;
+}
+
+.imageshape {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0rpx 10rpx;
+}

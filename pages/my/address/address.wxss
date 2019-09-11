@@ -1,0 +1,63 @@
+.body {
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  height: 130rpx;
+  margin: 15rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #ccc;
+  justify-content: center;
+}
+
+.item_left {
+  width: 90%;
+}
+
+.item_right {
+  width: 10%;
+}
+
+.item_address {
+  margin: 15rpx;
+  margin-bottom: 5rpx;
+  font-size: 30rpx;
+  color: #111;
+}
+
+.item_phonenumber,.item_name {
+  margin: 15rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.changeaddress {
+  margin-top: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.foot {
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #f2eada;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.addaddress{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 10rpx;
+}
+
+.addaddresstext {
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #16C4AF;
+}
