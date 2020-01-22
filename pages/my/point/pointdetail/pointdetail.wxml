@@ -1,0 +1,11 @@
+<view class="all">
+  <view class="top" style="background-color:{{backGroundColor_array[backGroundColor_index]}}">
+    <view class="top_top">{{type}}</view>
+    <view class="top_bottom">
+      <image class="top_bottom_text" src="../../../../utils/image/bean.png"></image>
+      <input class="top_bottom_input"></input>
+    </view>
+  </view>
+  
+  <view class="item">确认</view>
+</view>

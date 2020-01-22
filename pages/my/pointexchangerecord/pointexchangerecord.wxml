@@ -1,0 +1,20 @@
+<view class="all">
+  <view class="item" wx:for="{{record_list}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value">
+    <view class="item_left">
+      <view class="item_left_icon">
+        <image class="item_icon" src="{{value.merchant_icon}}"></image>
+      </view>
+      <view class="item_left_info">
+        <text decode="{{true}}">商&emsp;&emsp;家：{{value.merchant_name}}</text>
+        <text decode="{{true}}">商家地址：{{value.merchant_address}}</text>
+        <text decode="{{true}}">截止时间：{{value.pointExchange_time}}</text>
+        <text decode="{{true}}">兑换内容：{{value.pointExchange_context}}</text>
+      </view>
+    </view>
+    <view class="item_right">
+      <view class="item_right_incloud" data-id="{{value.id}}">
+        <text>验证码{{value.record_code}}</text>
+      </view>
+    </view>
+  </view>
+</view>

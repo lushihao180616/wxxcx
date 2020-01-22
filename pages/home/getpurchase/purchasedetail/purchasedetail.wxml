@@ -1,0 +1,37 @@
+<view class="all">
+  <view class="row">
+    <text class="text" decode="{{true}}">名&emsp;&emsp;称</text>
+    <text class="text_value">{{nowPurchase.name}}</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">类&emsp;&emsp;型</text>
+    <text class="text_value">{{nowPurchase.type.name}}</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">地&emsp;&emsp;址</text>
+    <text class="text_value">{{nowPurchase.building.name}} / {{nowPurchase.address.roomcode}}</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">赏&emsp;&emsp;金</text>
+    <text class="text_value">￥{{nowPurchase.reward}}</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">限&emsp;&emsp;时</text>
+    <text class="text_value">{{nowPurchase.deadTime}}</text>
+  </view>
+  <view class="row2">
+    <text class="text" decode="{{true}}">备&emsp;&emsp;注</text>
+    <text class="text_value">{{nowPurchase.remarks}}</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">发&ensp;单&ensp;人</text>
+    <text class="text_value">{{nowPurchase.sendUserInfo.nickName}}-{{nowPurchase.sendUserInfo.phoneNumber}}</text>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">发单时间</text>
+    <text class="text_value">{{nowPurchase.sendTime}}</text>
+  </view>
+  <view class="foot" bindtap="backToPage">
+    <button class="addaddresstext">接单</button>
+  </view>
+</view>

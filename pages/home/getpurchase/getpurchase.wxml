@@ -1,35 +1,41 @@
 <view class="all">
   <view class="head">
+    <view class="describe">建筑物：{{building_array[building_index].name}} / 类型：{{type_array[type_index].name}}</view>
     <view class="icon">
-        <picker class="picker" bindchange="buildingChange" value="{{building_index}}" range="{{building_array}}">        
-          <image class="imageshape" src="{{building_image}}"></image>
-        </picker>
-        <picker class="picker" bindchange="typeChange" value="{{type_index}}" range="{{type_array}}"> 
-          <image class="imageshape" src="{{type_image}}"></image> 
-        </picker>
-        <image class="imageshape" src="{{price_image}}" bindtap="showNowPrice"></image>
-      </view>
-      <view class="search">
-        <image class="imageshape2" src="../../../utils/image/search.png"></image>
-        <input class="input" placeholder="名称关键字" placeholder-class="placeholderstyle"></input>
-      </view>
+      <picker class="picker" bindchange="buildingChange" value="{{building_index}}" range-key="name" range="{{building_array}}">        
+        <image class="imageshape" src="{{building_image}}"></image>
+      </picker>
+      <picker class="picker" bindchange="typeChange" value="{{type_index}}" range-key="name" range="{{type_array}}"> 
+        <image class="imageshape" src="{{type_image}}"></image> 
+      </picker>
+    </view>
   </view>
   <view class="body">
-    <view class="item" bindtap="toPurchaseDetailPage">
-      <view class="item_row1">
-        <view class="item_type">
-          <image class="item_type_image" src="../../../utils/image/food.png"></image>
+    <view class="item" wx:for="{{purchase_array}}" wx:key="key" wx:for-index="key" data-index="{{key}}" bindtap="toPurchaseDetailPage" wx:for-item="value">
+      <view class="row_01" bindtap="toPurchaseDetailPage" data-index="{{key}}">
+        <view class="type_name">
+          <image class="purchaseType" src="../../../utils/image/{{value.type.code}}.png"></image>
+          <view class="purchaseName">￥{{value.reward}}</view>
         </view>
-        <view class="item_name_time">
-          <view class="item_name">肉夹馍</view>
-          <view class="item_time">19:30</view>
+        <view>
+          <view class="purchaseStatus">{{value.deadTime}}</view>
         </view>
       </view>
-      <view class="item_row2">
-        <view class="item_address_price">
-          <view class="item_address">五号楼506</view>
-          <view class="item_price">￥1.00</view>
+      <view class="row_02" bindtap="toPurchaseDetailPage" data-index="{{key}}">
+        <view class="basicInfo">
+          <view class="table">
+            <view class="item_item" wx:for="{{value.purchaseItems}}" wx:key="key2" wx:for-index="key2" data-index="{{key2}}" wx:for-item="value2">
+              <view class="tr">
+                <view class="td1">{{value2.name}}</view>
+                <view class="td2">{{value2.num}}</view>
+                <view class="td3">{{value2.remarks}}</view>
+              </view>
+            </view>
+          </view>
         </view>
+      </view>
+      <view class="row_03">
+        <view class="item_address">{{value.building.name}} / {{value.address.roomcode}}</view>
       </view>
     </view>
   </view>

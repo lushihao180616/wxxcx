@@ -1,0 +1,20 @@
+<view class="all">
+  <view class="top">
+    <view class="top_top">捎点余额</view>
+    <view class="top_bottom">{{point}}</view>
+  </view>
+  
+  <view class="item">
+    <view class="shape" bindtap="buttonClick" data-url="{{'pointdetail/pointdetail?flag=1'}}" hover-class="hover">
+      <image class="imageshape" src="../../../utils/image/pointin.png"></image>
+      <text>充值</text>
+      <image class="imageshape right" src="../../../utils/image/right.png"></image>
+    </view>
+    <view class="border"></view>
+    <view class="shape" bindtap="buttonClick" data-url="{{'pointdetail/pointdetail?flag=0'}}" hover-class="hover">
+      <image class="imageshape" src="../../../utils/image/pointout.png"></image>
+      <text>提现</text>
+      <image class="imageshape right" src="../../../utils/image/right.png"></image>
+    </view>
+  </view>
+</view>

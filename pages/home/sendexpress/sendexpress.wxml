@@ -1,0 +1,50 @@
+<view class="all">
+  <view class="row4">
+    基础信息
+  </view>
+  <view class="row">
+      <text class="text" decode="{{true}}">地&emsp;&emsp;址</text>
+      <picker class="picker" bindchange="addressChange" value="{{address_index}}" range-key="buildingName_roomCode" range="{{address_array}}">
+        <view>
+          {{address_array[address_index].buildingName_roomCode}}
+        </view>
+      </picker>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">赏&emsp;&emsp;金</text>
+    <input class="input" name="reward" placeholder="赏金" placeholder-class="placeholderstyle"  bindinput="rewardChange" value="{{reward}}"></input>
+  </view>
+  <view class="row">
+    <text class="text" decode="{{true}}">限&emsp;&emsp;时</text>
+    <picker class="picker" mode="multiSelector" bindcolumnchange="bindMultiPickerColumnChange" bindchange="bindStartMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">{{deadTime}}</picker>
+  </view>
+  <view class="row4">
+    快递详情
+  </view>
+  <form bindsubmit="addItem">
+    <view class="row">
+      <text class="text" decode="{{true}}">快&ensp;递&ensp;号</text>
+      <input class="input" name="code" placeholder="快递号" placeholder-class="placeholderstyle" value="{{codeValue}}"></input>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">收&ensp;件&ensp;人</text>
+      <input class="input" name="name" placeholder="收件人" placeholder-class="placeholderstyle" value="{{nameValue}}"></input>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">手&ensp;机&ensp;号</text>
+      <input class="input" name="number" placeholder="手机号" placeholder-class="placeholderstyle" value="{{numberValue}}"></input>
+    </view>
+    <view class="row row2">
+      <button class="button_left" form-type="submit">添加</button>
+      <picker class="showNum" bindchange="purchaseItemChange" range-key="name_num" style="background:{{color_array[color_index]}}" value="{{purchaseItem_index}}" range="{{purchaseItem_array}}">
+        <view class="inner">
+          {{color_index}}
+        </view>
+      </picker> 
+      <button class="button_right" bindtap="removeItem">移除</button>
+    </view>
+  </form>
+  <view class="foot">
+    <button class="addaddresstext" bindtap="send"><text wx:if="{{ifUpdate==false}}">发布</text><text wx:else>更新</text></button>
+  </view>
+</view>

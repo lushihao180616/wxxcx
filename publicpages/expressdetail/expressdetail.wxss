@@ -1,0 +1,109 @@
+.page {
+  background-color: #efefef;
+  height: 300rpx;
+}
+
+.row,.row2 {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10rpx;
+  background-color: #efefef;
+  height: 75rpx;
+  margin-bottom: 5rpx;
+}
+
+.text {
+  font-size: 30rpx;
+  width: 200rpx;
+}
+
+.text_value,.textarea_value {
+  font-size: 30rpx;
+  width: 100%;
+}
+
+.row2 {
+  height: 150rpx;
+}
+
+.textarea_value {
+  margin-top: 10rpx;
+  height: 140rpx;
+}
+
+.foot {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.addaddresstext {
+  width: 100%;
+  height: 90rpx;
+  background-color: #09BB07;
+  font-size: 30rpx;
+  color: white;
+  font-weight: bold;
+  padding-top: 10rpx;
+}
+
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.td1,.td2,.td3,.td4,.td5 {
+  width: 70%;
+  justify-content: left;
+  text-align: left;
+  height: 75rpx;
+  margin-bottom: 5rpx;
+  background-color: #efefef;
+  font-size: 30rpx;
+  line-height: 75rpx;
+  margin-left: 3rpx;
+  margin-right: 3rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+.td2 {
+  width: 30%;
+}
+.td3 {
+  width: 60%;
+}
+.td4 {
+  width: 20%;
+}
+.td5 {
+  width: 20%;
+}
+.td0 {
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.row4 {
+  text-align: center;
+  background-color: #999;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 5rpx;
+  color: white;
+  font-weight: bold;
+  margin-top: 10rpx;
+}

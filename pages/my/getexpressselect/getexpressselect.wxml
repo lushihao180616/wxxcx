@@ -1,0 +1,53 @@
+<view class="all">
+	<view class="head">
+		<view class="head_item" style="background-color: {{color_array[0].color}}" bindtap="changeColor" data-index="0">
+			<image class="image_status" src="../../../utils/image/status_wait.png"></image>
+			<text>待送达</text>
+		</view>
+		<view class="head_item" style="background-color: {{color_array[1].color}}" bindtap="changeColor" data-index="1">
+			<image class="image_status" src="../../../utils/image/status_finsh.png"></image>
+			<text>已完成</text>
+		</view>
+		<view class="head_item" style="background-color: {{color_array[2].color}}" bindtap="changeColor" data-index="2">
+			<image class="image_status" src="../../../utils/image/status_doing.png"></image>
+			<text>已超时</text>
+		</view>
+	</view>
+	<view class="body">
+		<view class="item" wx:for="{{express_array}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value">
+			<view class="row_01" bindtap="toExpressDetailPage" data-index="{{key}}">
+				<view class="type_name">
+					{{value.building.name}} / {{value.address.roomcode}}
+				</view>
+				<view>
+					<view class="expressStatus">{{value.deadTime}}</view>
+				</view>
+			</view>
+			<view class="row_02" bindtap="toExpressDetailPage" data-index="{{key}}">
+				<view class="basicInfo">
+					<view class="table">
+						<view class="tr">
+							<view class="td1 td0">地址</view>
+							<view class="td2 td0">数量</view>
+						</view>
+						<view class="item_item" wx:for="{{value.expressItems}}" wx:key="key2" wx:for-index="key2" data-index="{{key2}}" wx:for-item="value2">
+							<view class="tr tr2">
+								<view class="td1">{{value2.address}}</view>
+								<view class="td2">{{value2.count}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="row_03">
+				<view class="editOrOther">
+					<view class="button" wx:if="{{value.status.id == 2}}" bindtap="callGetUser" data-index="{{key}}">联系Ta</view>
+					<view class="button" wx:if="{{value.status.id == 2 && value.sendUserCancle}}" bindtap="cancleExpress" data-index="{{key}}">取消任务</view>
+					<view class="button" bindtap="sendExpressReward" wx:if="{{value.status.id == 2 && value.reward == 0}}" data-index="{{key}}">捎点结算</view>
+					<view class="button" bindtap="completeExpress" wx:if="{{value.status.id == 2 && value.reward != 0 && !value.getUserComplete}}" data-index="{{key}}">已送达</view>
+					<view class="button" bindtap="completeExpress" wx:if="{{value.status.id == 2 && value.getUserComplete}}" data-index="{{key}}">撤回送达</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

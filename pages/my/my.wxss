@@ -33,11 +33,32 @@ page {
   border-radius: 50%;
 }
 
+.userinfo-point {
+  color: peru;
+  font-size: 20rpx;
+  margin-top: -60rpx;
+
+}
+
 .userinfo-nickname {
   margin-top: -40rpx;
   font-size: 30rpx;
   color: black;
   font-weight: bolder;
+  margin-left: 0rpx;
+}
+
+.login {
+  background-color: bisque;
+}
+
+.moreinfo {
+  position: fixed;
+  right: 80rpx;
+  font-size: 30rpx;
+  color: black;
+  font-weight: bolder;
+  margin-top: -20rpx;
 }
 
 .row {
@@ -49,6 +70,7 @@ page {
 }
 
 .row_item {
+  height: 135rpx;
   margin: 10rpx;
   width: 25%;
   display: flex;
@@ -60,13 +82,17 @@ page {
   background-color: #f2eada;
 }
 
+button::after{
+  display: none;
+}
+
 .image_item {
   width: 70rpx;
   height: 70rpx;
 }
 
 .item {
-  margin-top: 50rpx;
+  margin-top: 100rpx;
   background-color: white;
   width: 100%;
   padding-top: 5rpx;
@@ -75,10 +101,10 @@ page {
 
 .shape {
   width: 100%;
-  height: 75rpx;
+  height: 90rpx;
   padding-left: 10rpx;
-  font-size: 25rpx;
-  line-height: 75rpx;
+  font-size: 30rpx;
+  line-height: 90rpx;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -91,7 +117,19 @@ page {
 }
 
 .imageshape {
-  width: 40rpx;
-  height: 40rpx;
+  width: 45rpx;
+  height: 45rpx;
   margin: 0rpx 10rpx;
+}
+
+.point {
+  color: #aaa;
+  font-size: 25rpx;
+  position: fixed;
+  right: 70rpx;
+}
+
+.right {
+  position: fixed;
+  right: 0rpx;
 }

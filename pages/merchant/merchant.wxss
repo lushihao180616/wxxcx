@@ -1,0 +1,57 @@
+page {
+  height: 100%;
+  background-color: #efefef;
+}
+
+.all {
+  height: 100%;
+  background-color: #efefef;
+}
+
+.body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin: 10rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.item_left {
+  height: 100%;
+  background-color: #333;
+}
+
+.bean {
+  margin: 10rpx;
+  width: 110rpx;
+  height: 110rpx;
+  border: 10rpx dashed #efefef;
+}
+
+.item_right {
+  height: 100%;
+  width: 100%;
+  background-color: #999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #555;
+  font-size: 35rpx;
+  padding-left: 10rpx;
+}
+
+.empty {
+  font-size: 30rpx;
+  color: #999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

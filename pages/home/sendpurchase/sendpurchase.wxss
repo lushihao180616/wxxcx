@@ -1,8 +1,3 @@
-.page {
-  background-color: #efefef;
-  height: 300rpx;
-}
-
 .row {
   padding-left: 20rpx;
   padding-right: 20rpx;
@@ -25,8 +20,8 @@
   font-size: 30rpx;
 }
 
-.placeholderstyle {
-  font-size: 30rpx;
+.input2 {
+  height: 120rpx;
 }
 
 .picker {
@@ -35,38 +30,86 @@
   width: 100%;
 }
 
-.radio-group {
+.row2 {
+  margin-top: 3rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row3 {
+  height: 150rpx;
+}
+
+.row4 {
+  text-align: center;
+  background-color: #999;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 5rpx;
+  color: white;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.button_left,.button_right {
+  margin-bottom: 10rpx;
+  border-radius: 35rpx;
+  height: 55rpx;
+  background-color: #777;
+  width: 50%;
+  text-align: center;
+  line-height: 55rpx;
+  color: white;
   font-size: 30rpx;
 }
 
-.radio {
-  width: 40rpx;
-  transform:translate(-50%, -5%) scale(0.7);
-  margin-left: -30rpx;
+.button_left {
+  margin-left: -50rpx;
 }
 
-.radio2 {
-  margin-left: 300rpx;
+.button_right {
+  margin-right: -50rpx; 
 }
 
-.row2 {
-  height: 210rpx;
+.showNum {
+  height: 75rpx;
+  width: 75rpx;
+  border-radius: 40rpx;
+  color: white;
 }
 
-.input2 {
-  height: 180rpx;
+.inner {
+  width: 75rpx;
+  height: 75rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .foot {
-  height: 75rpx;
-  margin: 180rpx 30rpx 0rpx 30rpx;
-  border-radius: 20rpx;
+  left: 15rpx;
+  right: 15rpx;
+  height: 90rpx;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.button {
-  height: 75rpx;
+.addaddresstext {
+  width: 100%;
+  height: 90rpx;
   background-color: #09BB07;
   font-size: 30rpx;
   color: white;
   font-weight: bold;
+  padding-top: 10rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
 }

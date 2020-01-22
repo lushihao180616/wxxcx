@@ -1,18 +1,60 @@
 <view class="all">
-  <view class="item" bindtap="toPurchaseDetailPage">
-    <view class="item_row1">
-      <view class="item_type">
-        <image class="item_type_image" src="../../../utils/image/food.png"></image>
-      </view>
-      <view class="item_name_time">
-        <view class="item_name">肉夹馍</view>
-        <view class="item_time">19:30</view>
-      </view>
+  <view class="head">
+    <view class="head_item" style="background-color: {{color_array[0].color}}" bindtap="changeColor" data-index="0">
+      <image class="image_status" src="../../../utils/image/status_wait.png"></image>
+      <text>待接单</text>
     </view>
-    <view class="item_row2">
-      <view class="item_address_price">
-        <view class="item_address">五号楼506</view>
-        <view class="item_price">￥1.00</view>
+    <view class="head_item" style="background-color: {{color_array[1].color}}" bindtap="changeColor" data-index="1">
+      <image class="image_status" src="../../../utils/image/status_doing.png"></image>
+      <text>待送达</text>
+    </view>
+    <view class="head_item" style="background-color: {{color_array[2].color}}" bindtap="changeColor" data-index="2">
+      <image class="image_status" src="../../../utils/image/status_finsh.png"></image>
+      <text>已完成</text>
+    </view>
+    <view class="head_item" style="background-color: {{color_array[3].color}}" bindtap="changeColor" data-index="3">
+      <image class="image_status" src="../../../utils/image/status_cancle.png"></image>
+      <text>已取消</text>
+    </view>
+  </view>
+  <view class="body">
+    <view class="item" wx:for="{{purchase_array}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value">
+      <view class="row_01" bindtap="toPurchaseDetailPage" data-index="{{key}}">
+        <view class="type_name">
+          <image class="purchaseType" src="../../../utils/image/{{value.type.code}}.png"></image>
+          <view class="purchaseName">￥{{value.reward}}</view>
+        </view>
+        <view>
+          <view class="purchaseStatus">{{value.deadTime}}</view>
+        </view>
+      </view>
+      <view class="row_02" bindtap="toPurchaseDetailPage" data-index="{{key}}">
+        <view class="basicInfo">
+          <view class="table">
+            <view class="item_item" wx:for="{{value.purchaseItems}}" wx:key="key2" wx:for-index="key2" data-index="{{key2}}" wx:for-item="value2">
+              <view class="tr">
+                <view class="td1">{{value2.name}}</view>
+                <view class="td2">{{value2.num}}</view>
+                <view class="td3">{{value2.remarks}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="row_03">
+        <view class="item_address">{{value.building.name}} / {{value.address.roomcode}}</view>
+        <view class="editOrOther">
+          <view class="button" wx:if="{{value.status.name == '待接单'}}" bindtap="removePurchase" data-index="{{key}}">删除任务</view>
+          <view class="button" wx:if="{{value.status.name == '待接单'}}" bindtap="editPurchase" data-index="{{key}}">修改任务</view>
+
+          <view class="button" wx:if="{{value.status.name == '待送达'}}" bindtap="callGetUser" data-index="{{key}}">联系Ta</view>
+          <view class="button" wx:if="{{value.status.name == '待送达' && !value.sendUserCancle}}" bindtap="canclePurchase" data-index="{{key}}">申请取消</view>
+          <view class="button" wx:if="{{value.status.name == '待送达' && value.sendUserCancle}}" bindtap="canclePurchase" data-index="{{key}}">撤回取消</view>
+          <view class="button" wx:if="{{value.status.name == '待送达' && value.getUserComplete}}" bindtap="completePurchase" data-index="{{key}}">确认送达</view>
+
+          <view class="button" wx:if="{{value.status.name == '已取消'}}" bindtap="removePurchase" data-index="{{key}}">删除任务</view>
+          <view class="button" wx:if="{{value.status.name == '已取消'}}" bindtap="editPurchase" data-index="{{key}}">重新发送</view>
+        </view>
       </view>
     </view>
   </view>

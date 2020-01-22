@@ -1,0 +1,47 @@
+<view class="all">
+  <form bindsubmit="saveInfo">
+    <view class="row">
+      <text class="text" decode="{{true}}">昵&emsp;&emsp;称</text>
+      <input class="input" name="nickName" placeholder="昵称" value="{{userinfo.nickName}}" placeholder-class="placeholderstyle"></input>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">手&ensp;机&ensp;号</text>
+      <input class="input" name="phoneNumber" placeholder="手机号" value="{{userinfo.phoneNumber}}" placeholder-class="placeholderstyle"></input>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">性&emsp;&emsp;别</text>
+      <picker class="picker" bindchange="sexChange" value="{{sex_index}}" range="{{sex_array}}"> 
+        <view>
+          {{sex_array[sex_index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">省&emsp;&emsp;份</text>
+      <picker class="picker" bindchange="provinceChange" value="{{province_index}}" range-key="name" range="{{province_array}}"> 
+        <view>
+          {{province_array[province_index].name}}
+        </view>
+      </picker>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">学&emsp;&emsp;校</text>
+      <picker class="picker" bindchange="schoolChange" value="{{school_index}}" range-key="name" range="{{school_array}}"> 
+        <view>
+          {{school_array[school_index].name}}
+        </view>
+      </picker>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">宿&ensp;舍&ensp;楼</text>
+      <picker class="picker" bindchange="dormitoryChange" value="{{dormitory_index}}" range-key="name" range="{{dormitory_array}}"> 
+        <view>
+          {{dormitory_array[dormitory_index].name}}
+        </view>
+      </picker>
+    </view>
+    <view class="foot">
+      <button class="button" form-type="submit">保存信息</button>
+    </view>
+  </form>
+</view>

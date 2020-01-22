@@ -1,0 +1,28 @@
+<view class="all">
+  <form bindsubmit="modifyAddress">
+    <view class="row">
+      <text class="text" decode="{{true}}">建筑物</text>
+      <picker class="picker" bindchange="buildingChange" value="{{building_index}}" range-key="name" range="{{building_array}}">
+        <view>
+          {{building_array[building_index].name}}
+        </view>
+      </picker> 
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">房间号</text>
+      <input class="input" name="roomcode" placeholder="房间号" value="{{nowAddress.roomcode}}" placeholder-class="placeholderstyle"></input>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">姓&emsp;名</text>
+      <input class="input" name="name" placeholder="姓名" value="{{nowAddress.name}}" placeholder-class="placeholderstyle"></input>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">手机号</text>
+      <input class="input" name="phoneNumber" placeholder="手机号" value="{{nowAddress.phoneNumber}}" placeholder-class="placeholderstyle"></input>
+    </view>
+    <view class="foot">
+      <button class="addaddresstext" form-type="submit">修改地址</button>
+      <button class="addaddresstext" bindtap="deleteAddress">删除地址</button>
+    </view>
+  </form>
+</view>

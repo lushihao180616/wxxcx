@@ -1,0 +1,50 @@
+page {
+  background-color: #efefef;
+}
+
+.top {
+  width: 100%;
+  height: 250rpx;
+  color: #444;
+  padding-left: 50rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.top_top {
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+
+.top_bottom {
+  font-size: 100rpx;
+  margin-top: 25rpx;
+  height: 120rpx;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+
+.top_bottom_text {
+  margin-top: 30rpx;
+  width: 100rpx;
+  height: 50rpx;
+}
+
+.top_bottom_input {
+  font-size: 100rpx;
+  margin-left: 15rpx;
+  height: 120rpx;
+}
+
+.item {
+  background-color: #09BB07;
+  margin: 40rpx;
+  margin-top: 100rpx;
+  height: 75rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 75rpx;
+  color: white;
+  font-size: 30rpx;
+  font-weight: bold;
+}

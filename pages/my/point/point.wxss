@@ -1,0 +1,65 @@
+page {
+  background-color: #efefef;
+}
+
+.top {
+  width: 100%;
+  height: 250rpx;
+  background-color: #666;
+  color: white;
+  padding-left: 50rpx;
+}
+
+.top_top {
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+
+.top_bottom {
+  font-size: 100rpx;
+  margin-top: 25rpx;
+  font-weight: bold;
+}
+
+.item {
+  margin-top: 50rpx;
+  background-color: white;
+  width: 100%;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+}
+
+.shape {
+  width: 100%;
+  height: 90rpx;
+  padding-left: 10rpx;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.border {
+  width: 100%;
+  margin-left: 70rpx;
+  border: 1rpx solid #ddd;
+}
+
+.imageshape {
+  width: 45rpx;
+  height: 45rpx;
+  margin: 0rpx 10rpx;
+}
+
+.point {
+  color: #aaa;
+  font-size: 25rpx;
+  position: fixed;
+  right: 70rpx;
+}
+
+.right {
+  position: fixed;
+  right: 0rpx;
+}

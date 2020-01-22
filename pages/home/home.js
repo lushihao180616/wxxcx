@@ -1,37 +1,46 @@
-// pages/my/my.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    imgUrls: [
+      'http://img3.imgtn.bdimg.com/it/u=3077861072,6095005&fm=26&gp=0.jpg',
+    ]
   },
 
   // 发送任务
-  send_purchase: function () {
+  send_purchase: function() {
     wx.navigateTo({
       url: 'sendpurchase/sendpurchase'
     })
   },
 
   // 接受任务
-  get_purchase: function () {
+  get_purchase: function() {
     wx.navigateTo({
       url: 'getpurchase/getpurchase'
     })
   },
 
-  // 出手宝贝
-  sell_goods: function () {
+  // 发快递
+  send_express: function () {
     wx.navigateTo({
-      url: 'sellgoods/sellgoods'
+      url: 'sendexpress/sendexpress'
     })
   },
 
-  // 入手宝贝
-  buy_goods: function () {
+  // 取快递
+  get_express: function () {
     wx.navigateTo({
-      url: 'buygoods/buygoods'
+      url: 'getexpress/getexpress'
+    })
+  },
+
+  // 告白墙
+  confession: function () {
+    wx.navigateTo({
+      url: 'confession/confession',
     })
   }
 })

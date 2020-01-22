@@ -40,8 +40,8 @@
 }
 
 .foot {
-  width: 750rpx;
-  height: 80rpx;
+  width: 100%;
+  height: 90rpx;
   background-color: #f2eada;
   position: fixed;
   bottom: 0rpx;
@@ -53,11 +53,11 @@
 .addaddress{
   width: 60rpx;
   height: 60rpx;
-  margin: 10rpx;
+  margin: 15rpx;
 }
 
 .addaddresstext {
-  line-height: 80rpx;
+  line-height: 90rpx;
   font-size: 30rpx;
   color: #16C4AF;
 }

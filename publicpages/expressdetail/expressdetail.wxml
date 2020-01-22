@@ -1,0 +1,64 @@
+<view class="all">
+	<view class="row4">
+		基础信息
+	</view>
+	<view class="row">
+		<text class="text" decode="{{true}}">地&emsp;&emsp;址</text>
+		<text class="text_value">{{nowExpress.building.name}} / {{nowExpress.address.roomcode}}</text>
+	</view>
+	<view class="row">
+		<text class="text" decode="{{true}}">限&emsp;&emsp;时</text>
+		<text class="text_value">{{nowExpress.deadTime}}</text>
+	</view>
+	<view class="row">
+		<text class="text" decode="{{true}}">发&ensp;单&ensp;人</text>
+		<text class="text_value">{{nowExpress.sendUserInfo.userinfo.nickName}}-{{nowExpress.sendUserInfo.userinfo.phoneNumber}}</text>
+	</view>
+	<view class="row">
+		<text class="text" decode="{{true}}">发单时间</text>
+		<text class="text_value">{{nowExpress.sendTime}}</text>
+	</view>
+	<view class="row" wx:if="{{nowExpress.getUserInfo}}">
+		<text class="text" decode="{{true}}">接&ensp;单&ensp;人</text>
+		<text class="text_value">{{nowExpress.getUserInfo.userinfo.nickName}}-{{nowExpress.getUserInfo.userinfo.phoneNumber}}</text>
+	</view>
+	<view class="row" wx:if="{{nowExpress.getTime}}">
+		<text class="text" decode="{{true}}">接单时间</text>
+		<text class="text_value">{{nowExpress.getTime}}</text>
+	</view>
+	<view class="row4">
+		快递信息
+	</view>
+	<view class="table">
+		<view class="tr">
+			<view class="td1 td0">地址</view>
+			<view class="td2 td0">数量</view>
+		</view>
+		<view wx:for="{{nowExpress.expressItems}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value">
+			<view class="tr">
+				<view class="td1">{{value.address}}</view>
+				<view class="td2">{{value.count}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="row4" wx:if="{{nowExpress.reward != 0}}">
+		快递类型
+	</view>
+	<view class="table" wx:if="{{nowExpress.reward != 0}}">
+		<view class="tr">
+			<view class="td3 td0">类型</view>
+			<view class="td4 td0">数量</view>
+			<view class="td5 td0">单价</view>
+		</view>
+		<view wx:for="{{nowExpress.expressTypeAndNums}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value2">
+			<view class="tr">
+				<view class="td3">{{value2.type.name}}（{{value2.type.code}}）</view>
+				<view class="td4">{{value2.num}}</view>
+				<view class="td5">{{value2.type.spend}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="foot" bindtap="getExpress" wx:if="{{showButton == true}}">
+		<button class="addaddresstext">接单</button>
+	</view>
+</view>

@@ -1,44 +1,58 @@
 <view class="all">
-  <view class="row" style="margin-top:70rpx;">
-    <text class="text" decode="{{true}}">名&emsp;&emsp;称</text>
-    <input class="input" placeholder="名称" placeholder-class="placeholderstyle"></input>
+  <view class="row4">
+    基础信息
   </view>
   <view class="row">
     <text class="text" decode="{{true}}">类&emsp;&emsp;型</text>
-    <picker class="picker" bindchange="typeChange" value="{{type_index}}" range="{{type_array}}">
+    <picker class="picker" bindchange="typeChange" value="{{type_index}}" range-key="name" range="{{type_array}}">
       <view>
-        {{type_array[type_index]}}
+        {{type_array[type_index].name}}
       </view>
     </picker> 
   </view>
   <view class="row">
-    <text class="text" decode="{{true}}">地&emsp;&emsp;址</text>
-    <picker class="picker" bindchange="addressChange" value="{{address_index}}" range="{{address_array}}">
-      <view>
-        {{address_array[address_index]}}
-      </view>
-    </picker>
-  </view>
-  <view class="row" hidden="true">
-    <text class="text" decode="{{true}}">当面交付</text>
-    <radio-group class="radio-group">
-      <radio class="radio" value="true" checked="true"/>是
-      <radio class="radio radio2" value="false"/>否
-    </radio-group>
+      <text class="text" decode="{{true}}">地&emsp;&emsp;址</text>
+      <picker class="picker" bindchange="addressChange" value="{{address_index}}" range-key="buildingName_roomCode" range="{{address_array}}">
+        <view>
+          {{address_array[address_index].buildingName_roomCode}}
+        </view>
+      </picker>
   </view>
   <view class="row">
     <text class="text" decode="{{true}}">赏&emsp;&emsp;金</text>
-    <input class="input" placeholder="赏金(元)" placeholder-class="placeholderstyle"></input>
+    <input class="input" name="reward" placeholder="赏金(元)" placeholder-class="placeholderstyle"  bindinput="rewardChange" value="{{reward}}"></input>
   </view>
   <view class="row">
     <text class="text" decode="{{true}}">限&emsp;&emsp;时</text>
-    <input class="input" placeholder="限时" placeholder-class="placeholderstyle"></input>
+    <picker class="picker" mode="multiSelector" bindcolumnchange="bindMultiPickerColumnChange" bindchange="bindStartMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">{{deadTime}}</picker>
   </view>
-  <view class="row row2">
-    <text class="text" decode="{{true}}">备&emsp;&emsp;注</text>
-    <textarea class="input input2" placeholder="备注" maxlength="100" placeholder-class="placeholderstyle"></textarea>
+  <view class="row4">
+    任务物品
   </view>
+  <form bindsubmit="addItem">
+    <view class="row">
+      <text class="text" decode="{{true}}">商&ensp;品&ensp;名</text>
+      <input class="input" name="name" placeholder="商品名" placeholder-class="placeholderstyle" value="{{nameValue}}"></input>
+    </view>
+    <view class="row">
+      <text class="text" decode="{{true}}">数&emsp;&emsp;量</text>
+      <input class="input" name="num" placeholder="数量" placeholder-class="placeholderstyle" value="{{numValue}}"></input>
+    </view>
+    <view class="row row3">
+      <text class="text" decode="{{true}}">备&emsp;&emsp;注</text>
+      <textarea class="input input2" name="remarks" placeholder="备注" maxlength="100" placeholder-class="placeholderstyle"  value="{{remarksValue}}"></textarea>
+    </view>
+    <view class="row row2">
+      <button class="button_left" form-type="submit">添加</button>
+      <picker class="showNum" bindchange="purchaseItemChange" range-key="name_num" style="background:{{color_array[color_index]}}" value="{{purchaseItem_index}}" range="{{purchaseItem_array}}">
+        <view class="inner">
+          {{color_index}}
+        </view>
+      </picker> 
+      <button class="button_right" bindtap="removeItem">移除</button>
+    </view>
+  </form>
   <view class="foot">
-    <button class="button">发布</button>
+    <button class="addaddresstext" bindtap="send"><text wx:if="{{ifUpdate==false}}">发布</text><text wx:else>更新</text></button>
   </view>
 </view>

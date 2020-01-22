@@ -1,0 +1,20 @@
+<view class="all">
+  <view class="item" wx:for="{{pointExchangeList}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value">
+    <view class="item_left">
+      <view class="item_left_icon">
+        <image class="item_icon" src="{{value.iconsrc}}"></image>
+      </view>
+      <view class="item_left_info">
+        <text decode="{{true}}">商&emsp;&emsp;家：{{value.name}}</text>
+        <text decode="{{true}}">截止时间：{{value.time}}</text>
+        <text decode="{{true}}">兑换内容：{{value.context}}</text>
+      </view>
+    </view>
+    <view class="item_right">
+      <view class="item_right_incloud" bindtap="toExchange" data-id="{{value.id}}">
+        <image class="item_bean" src="../../../../utils/image/bean.png"></image>
+        <text>{{value.point}}</text>
+      </view>
+    </view>
+  </view>
+</view>

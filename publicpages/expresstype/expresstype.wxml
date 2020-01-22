@@ -1,0 +1,26 @@
+<view class="all">
+	<view class="row4">
+		快递类型
+	</view>
+	<view class="table">
+		<view class="tr">
+			<view class="td3 td0">类型</view>
+			<view class="td4 td0">数量</view>
+			<view class="td5 td0">单价</view>
+		</view>
+		<view wx:for="{{type_array}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value2">
+			<view class="tr">
+				<view class="td3">{{value2.name}}（{{value2.code}}）</view>
+				<view class="td4">
+					<view class="addOrSub" bindtap="subNum" data-index="{{key}}">-</view>
+					<view>{{value2.num}}</view>
+					<view class="addOrSub" bindtap="addNum" data-index="{{key}}">+</view>
+				</view>
+				<view class="td5">{{value2.spend}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="foot" bindtap="sendPayPoint">
+		<button class="addaddresstext">发出</button>
+	</view>
+</view>

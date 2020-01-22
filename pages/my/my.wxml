@@ -2,47 +2,67 @@
 <view class="all">
   <view class="back">
     <view class="userinfo">
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <image class="userinfo-avatar" wx:if="{{!userInfo}}" src="../../utils/image/defaulticon.png" mode="cover"></image>
+      <button open-type="getUserInfo" wx:if="{{!userInfo}}" class="userinfo-nickname login" bindgetuserinfo="userLogin">登录</button>
+      <image class="userinfo-avatar" wx:if="{{userInfo}}" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname" wx:if="{{userInfo}}">{{userInfo.nickName}}</text>
+      <button class="moreinfo" wx:if="{{userInfo}}" bindtap="moreInfo">完善资料</button>
     </view>
   </view>
   <view class="row">
-    <view class="row_item" bindtap="toSendPurchaseSelectPage">
+    <view class="row_item" bindtap="buttonClick" data-url="{{'sendpurchaseselect/sendpurchaseselect'}}" hover-class="hover">
       <image class="image_item" src="../../utils/image/sendpurchase.png"></image>
       <text>发出的任务</text>
     </view>
-    <view class="row_item" bindtap="toGetPurchaseSelectPage">
+    <view class="row_item" bindtap="buttonClick" data-url="{{'getpurchaseselect/getpurchaseselect'}}" hover-class="hover">
       <image class="image_item" src="../../utils/image/getpurchase.png"></image>
       <text>接收的任务</text>
     </view>
-    <view class="row_item" bindtap="toSellGoodsSelectPage">
+    <view class="row_item" bindtap="buttonClick" data-url="{{'sellgoodsselect/sellgoodsselect'}}" hover-class="hover">
       <image class="image_item" src="../../utils/image/sellgoods.png"></image>
       <text>出手的宝贝</text>
     </view>
-    <view class="row_item" bindtap="toBuyGoodsSelectPage">
+    <view class="row_item" bindtap="buttonClick" data-url="{{'buygoodsselect/buygoodsselect'}}" hover-class="hover">
       <image class="image_item" src="../../utils/image/buygoods.png"></image>
       <text>入手的宝贝</text>
     </view>
   </view>
   <view class="item">
-    <view class="shape" bindtap="toAddressPage">
-      <image class="imageshape" src="../../utils/image/address.png"></image>
-      <text>收货地址</text>
-    </view>
-    <view class="border" hidden="true"></view>
-    <view class="shape" hidden="true" bindtap="toGiftPage">
-      <image class="imageshape" src="../../utils/image/gift.png"></image>
-      <text>推荐有奖</text>
-    </view>
-    <view class="border" hidden="true"></view>
-    <view class="shape" hidden="true" bindtap="toServicePage">
-      <image class="imageshape" src="../../utils/image/service.png"></image>
-      <text>我的客服</text>
+    <view class="shape" bindtap="buttonClick" data-url="{{'point/point?point=' + userInfo.point}}" hover-class="hover">
+      <image class="imageshape" src="../../utils/image/point.png"></image>
+      <text>捎点</text>
+      <text class="point">{{userInfo.point}}</text>
+      <image class="imageshape right" src="../../utils/image/right.png"></image>
     </view>
     <view class="border"></view>
-    <view class="shape" bindtap="toRulePage">
+    <view class="shape" bindtap="buttonClick" data-url="{{'address/address'}}" hover-class="hover">
+      <image class="imageshape" src="../../utils/image/address.png"></image>
+      <text>收货地址</text>
+      <image class="imageshape right" src="../../utils/image/right.png"></image>
+    </view>
+    <view class="border" hidden="true"></view>
+    <view class="shape" hidden="true" bindtap="buttonClick" data-url="{{'gift/gift'}}" hover-class="hover">
+      <image class="imageshape" src="../../utils/image/gift.png"></image>
+      <text>推荐有奖</text>
+      <image class="imageshape right" src="../../utils/image/right.png"></image>
+    </view>
+    <view class="border" hidden="true"></view>
+    <view class="shape" hidden="true" bindtap="buttonClick" data-url="{{'service/service'}}" hover-class="hover">
+      <image class="imageshape" src="../../utils/image/service.png"></image>
+      <text>我的客服</text>
+      <image class="imageshape right" src="../../utils/image/right.png"></image>
+    </view>
+    <view class="border"></view>
+    <view class="shape" bindtap="buttonClick" data-url="{{'rule/rule'}}" hover-class="hover">
       <image class="imageshape" src="../../utils/image/rule.png"></image>
       <text>捎微简介</text>
+      <image class="imageshape right" src="../../utils/image/right.png"></image>
+    </view>
+    <view class="border"></view>
+    <view class="shape" bindtap="buttonClick" data-url="{{'pointexchangerecord/pointexchangerecord'}}" hover-class="hover">
+      <image class="imageshape" src="../../utils/image/pointexchangerecord.png"></image>
+      <text>我的劵码</text>
+      <image class="imageshape right" src="../../utils/image/right.png"></image>
     </view>
   </view>
 </view>

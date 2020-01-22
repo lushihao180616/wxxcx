@@ -1,21 +1,28 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/purchasedetail/purchasedetail",
-    "pages/home/getpurchase/getpurchase",
-    "pages/home/buygoods/buygoods",
-    "pages/home/sendpurchase/sendpurchase",
-    "pages/home/sellgoods/sellgoods",
-    "pages/reward/reward",
     "pages/my/my",
+    "pages/home/home",
+    "pages/pointexchange/pointexchange",
+    "pages/my/point/point",
+    "pages/my/point/pointdetail/pointdetail",
+    "pages/my/getpurchaseselect/getpurchaseselect",
+    "pages/my/pointexchangerecord/pointexchangerecord",
+    "pages/my/editinfo/editinfo",
+    "pages/home/sendpurchase/sendpurchase",
+    "pages/home/getpurchase/getpurchase",
+    "pages/home/sendexpress/sendexpress",
+    "pages/home/getexpress/getexpress",
+    "pages/home/confession/confession",
     "pages/my/address/address",
     "pages/my/address/addaddress/addaddress",
+    "pages/my/address/modifyaddress/modifyaddress",
+    "pages/my/sendpurchaseselect/sendpurchaseselect",
     "pages/my/gift/gift",
     "pages/my/service/service",
     "pages/my/rule/rule",
-    "pages/my/sendpurchaseselect/sendpurchaseselect",
     "pages/my/sellgoodsselect/sellgoodsselect",
-    "pages/my/buygoodsselect/buygoodsselect"
+    "pages/my/buygoodsselect/buygoodsselect",
+    "publicpages/purchasedetail/purchasedetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,10 +44,10 @@
         "selectedIconPath": "utils/image/index_select.png"
       },
       {
-        "pagePath": "pages/reward/reward",
-        "text": "奖券",
-        "iconPath": "utils/image/reward.png",
-        "selectedIconPath": "utils/image/reward_select.png"
+        "pagePath": "pages/pointexchange/pointexchange",
+        "text": "兑换",
+        "iconPath": "utils/image/appointment.png",
+        "selectedIconPath": "utils/image/appointment_select.png"
       },
       {
         "pagePath": "pages/my/my",

@@ -1,0 +1,23 @@
+<view class="all">
+	<view class="body" wx:if="{{merchant_list.length > 0}}">
+		<view class="item" wx:for="{{merchant_list}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value" bindtap="buttonClick" data-url="{{'merchantdetail/merchantdetail'}}" >
+			<view class="item_left">
+				<image class="bean" src="{{value.iconSrc}}"></image>
+			</view>
+			<view class="item_right">
+				<view class="item_right_top">
+					名称：{{value.name}}
+				</view>
+				<view class="item_right_top">
+					类型：<text wx:for="{{value.types}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value_value">{{value_value.name}} </text>
+				</view>
+				<view class="item_right_bottom">
+					地址：{{value.address}}
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="empty" wx:if="{{merchant_list.length == 0}}">
+		暂无商家信息
+	</view>
+</view>

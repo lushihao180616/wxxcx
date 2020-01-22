@@ -1,0 +1,68 @@
+.item {
+  margin: 10rpx;
+  height: 190rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.item_left {
+  width: 75%;
+  height: 100%;
+  background-color: palegoldenrod;
+  border-left: 5rpx dashed white;
+  display: flex;
+  flex-direction: row;
+}
+
+.item_left_icon {
+  margin-left: 20rpx;
+  margin-top: 35rpx;
+  width: 160rpx;
+  height: 120rpx;
+}
+
+.item_icon {
+  width: 100%;
+  height: 100%;
+}
+
+.item_left_info {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 10rpx;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  font-size: 25rpx;
+}
+
+.item_right {
+  width: 25%;
+  height: 100%;
+  background-color: palegoldenrod;
+  border-left: 1rpx dashed #aaa;
+  border-right: 5rpx dashed white;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.item_right_incloud {
+  width: 150rpx;
+  height: 110rpx;
+  background-color: palevioletred;
+  border: 3rpx dashed palegoldenrod;
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+}
+
+.item_bean {
+  margin-left: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}

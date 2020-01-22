@@ -1,10 +1,12 @@
 <view class="all">
   <view class="body">
-    <view class="item">
+    <view class="item" wx:for="{{address_array}}" wx:key="key" wx:for-index="key" data-index="{{key}}" bindtap="editAddress" wx:for-item="value">
       <view class="item_left">
-        <view class="item_address">西安工业大学一号宿舍楼506</view>
+        <view class="item_address">
+          <text decode="{{true}}">{{value.building_name}}&ensp;/&ensp;{{value.roomcode}}</text>
+        </view>
         <view> 
-          <text class="item_name" decode="{{true}}">卢世豪&emsp;</text><text class="item_phonenumber">18191251242</text>
+          <text class="item_name" decode="{{true}}">{{value.name}}&emsp;</text><text class="item_phonenumber">{{value.phoneNumber}}</text>
         </view>
       </view>
       <view class="item_right">
@@ -12,7 +14,7 @@
       </view>
     </view>
   </view>
-  <view class="foot" bindtap="toAddAddressPage">
+  <view class="foot" bindtap="buttonClick" data-url="{{'addaddress/addaddress'}}">
     <image class="addaddress" src="../../../utils/image/addaddress.png"></image>
     <text class="addaddresstext">添加地址</text>
   </view>

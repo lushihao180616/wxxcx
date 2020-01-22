@@ -1,0 +1,26 @@
+<view class="all">
+	<view class="body" wx:if="{{record_list.length > 0}}">
+		<view class="item" wx:for="{{record_list}}" wx:key="key" wx:for-index="key" data-index="{{key}}" wx:for-item="value">
+			<view class="row1">
+				<view class="row1_left">
+					{{value.recordSourceType.name}}
+				</view>
+				<view class="row1_right">
+					{{value.saveTime}}
+				</view>
+			</view>
+			<view class="row2">
+				<view class="row2_left">
+					<view></view>
+					<view>{{value.flag.name}}{{value.num}}</view>
+				</view>
+				<view class="row2_right">
+					<image class="bean" src="../../../../utils/image/bean.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="empty" wx:if="{{record_list.length == 0}}">
+		暂无记录
+	</view>
+</view>
